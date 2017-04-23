@@ -1,7 +1,4 @@
 
-/*
- * RGB-LED Chroma scroller by OhjelmointiTuuba
- */
 
 
 void setup() {
@@ -25,15 +22,12 @@ Color color = GREEN;
 float redValue = 0.0;
 float greenValue = 0.0;
 float blueValue = 1.0;
-float maxVal = 255; //You could decrease brightness by decreasing this value but then you are going to have smaller amount of different colors and changes will be more noticeable. 
+float maxVal = 255;
 float stepSize = 0.001;
 
 void loop() 
 {
 
-  /*We check which color will be next and begin reducing current color while increasing
-   *next color by reducing current color from next color.
-   */
    
   if(color == GREEN)
   {
@@ -52,10 +46,8 @@ void loop()
   }
 
 
-  /*Then we need to check if current color has reached maximum value and turn old color completely off because
-   *it's value might be little bit over or less than zero depending on stepSize.
-   *We also pick next color.
-   */
+
+  
   
   if(blueValue >= 1)
   {
